@@ -53,7 +53,34 @@ namespace double_linked_list
                 STAR = newNode;
                 return;
             }
+            //if the node is to be inserted at the end of the list
+            Node previous, current;
+            for (current = previous = STAR;
+                current != null && nim >= current.noMhs;
+                previous = current, current = current.next)
+            {
+                if (nim == current.noMhs)
+                {
+                    Console.WriteLine("\nCuplicate number not allowed:");
+                    return;
+                }
+            }
+                //on the execution of the above for loop, prev, and curretnt
+                //will point to those nodes between witch the new nodes is to
+                //be inserted
+                newNode.next = current;
+                newNode.prev = previous;
+            //if the nide is to be inserted at the end of the list
 
+            if (current == null)
+            {
+                newNode.next = null;
+                previous.next = newNode;
+                return;
+            }
+            
+        
+           
             }
         }
     internal class Program
