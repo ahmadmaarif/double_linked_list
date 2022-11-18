@@ -43,9 +43,17 @@ namespace double_linked_list
             {
                 if((STAR!=null) && (nim == STAR.noMhs))
                 {
-
+                    Console.WriteLine("\nCuplicate number not allowed:");
+                    return;
                 }
+                newNode.next = STAR;
+                if(STAR!=null)
+                    STAR.prev = newNode;
+                newNode.next = null;
+                STAR = newNode;
+                return;
             }
+
             }
         }
     internal class Program
