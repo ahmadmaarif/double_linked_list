@@ -78,12 +78,22 @@ namespace double_linked_list
                 previous.next = newNode;
                 return;
             }
-            
-        
-           
+            current.prev= newNode;
+            previous.next = newNode;
+            }
+
+        public bool Search(int rollNo, ref Node previous, ref Node current)
+        {
+            previous = current = STAR;
+            while(current!= null && rollNo != current.noMhs)
+            { 
+                previous=current;
+                current= current.next;
             }
         }
-    internal class Program
+
+        }
+       internal class Program
     {
         static void Main(string[] args)
         {
