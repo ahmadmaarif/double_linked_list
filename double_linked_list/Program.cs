@@ -91,7 +91,49 @@ namespace double_linked_list
                 current= current.next;
             }
         }
+        public bool dellNode(int rollNo)
+        {
+            Node previous , current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            return true;
+            //the beginning of data 
+            if (current.next = null)
+            {
+                previous.next = null;
+                return true;
+            }
+            //Node between two nodes in the list
+            if (current ==STAR)
+            {
+                STAR = STAR.next;
+                if (STAR != null)
+                    STAR.next = null;
+                return true
+            }
+            public bool ListEmpty()
+            {
+                if (STAR = null)
+                    return true;
+                else
+                    return false;
+            }
+            public void ascending()
+            {
+                if (ListEmpty())
+                    Console.WriteLine("\nList is empty");
+                else
+                {
+                    Console.WriteLine("\nRecord in the ascending oeder off" + "Roll number are:|n");
+                    Node currentNode;
+                    for (currentNode = STAR; currentNode != null; currentNode = currentNode.next)
+                        Console.Write(currentNode.noMhs + currentNode.name + "\n");
+                }
+                    
+            }
 
+        }
         }
        internal class Program
     {
